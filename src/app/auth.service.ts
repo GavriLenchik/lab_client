@@ -15,7 +15,7 @@ export class AuthService {
     let headers = new Headers();
     const body = user;
     headers.append('Content-Type', 'application/json');
-    return this.http.post('https://my-lab-project-production.up.railway.app/account/reg',
+    return this.http.post('http://0.0.0.0:3000/account/reg',
     body);
 
   }
@@ -24,13 +24,13 @@ export class AuthService {
     let headers = new Headers();
     const body = user;
     headers.append('Content-Type', 'application/json');
-    return this.http.post('https://my-lab-project-production.up.railway.app/account/auth',
+    return this.http.post('http://0.0.0.0:3000/account/auth',
     body);
 
   }
 
   getBooks(){
-    return this.http.get('https://my-lab-project-production.up.railway.app/account/books');
+    return this.http.get('http://0.0.0.0:3000/account/books');
   }
 
 
